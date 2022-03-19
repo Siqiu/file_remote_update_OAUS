@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants />
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="32.ico" />
+    <None Remove="Stylesheet1.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="32.ico" />
+    <EmbeddedResource Include="Stylesheet1.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+    <PackageReference Include="Xhm.CPF" Version="0.8.8.5" />
+    <PackageReference Include="Xhm.CPF.Windows" Version="0.8.8.5" />
+    <PackageReference Include="Xhm.CPF.Skia" Version="0.8.8.5" />
+    <PackageReference Include="Xhm.CPF.Mac" Version="0.8.8.5" />
+    <PackageReference Include="Xhm.CPF.Linux" Version="0.8.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OAUS.Core.NetCore\OAUS.Core.NetCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ESBasic.NetCore">
+      <HintPath>..\dlls\ESBasic.NetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="ESFramework.NetCore">
+      <HintPath>..\dlls\ESFramework.NetCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
